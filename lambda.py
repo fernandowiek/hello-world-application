@@ -1,5 +1,6 @@
 import requests
 
+
 def handler(event, context):
     response = requests.get("https://jsonplaceholder.typicode.com/todos/1")
     res = {
@@ -8,4 +9,5 @@ def handler(event, context):
         "context": context
     }
     print(res)
+    
     return None
