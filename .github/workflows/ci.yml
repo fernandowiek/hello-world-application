@@ -8,6 +8,10 @@ on:
 jobs:
   CI:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+          - 3.9
     steps:
     # --------- use Python to install Python dependencies and run linter, tests, etc. ---------  
     - uses: actions/checkout@v3
