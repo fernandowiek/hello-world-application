@@ -1,5 +1,11 @@
-certifi
-chardet
-idna
-requests
-urllib3
+awscli
+botocore
+colorama
+docutils
+jmespath
+pyasn1
+python-dateutil
+PyYAML
+rsa
+s3transfer
+six
