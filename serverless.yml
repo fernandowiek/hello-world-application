@@ -1,4 +1,4 @@
-service: basic-serverless-lambda-python
+service: hello-world-application
 
 provider:
   name: aws
@@ -14,9 +14,9 @@ package:
 
 functions:
   theLambda:
-    name: hello-world-lambda
+    name: hello-world-application
     handler: lambda.handler
-    description: hello-world-lambda
+    description: hello-world-application
     timeout: 5 # seconds
     memorySize: 128 # mb
     package:

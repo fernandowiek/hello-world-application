@@ -1,4 +1,4 @@
-name: Deploy Serverless Python Lambda
+name: Deploy Serverless Python Lambda (dev)
 
 on:
   push:
@@ -7,33 +7,13 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Dev
+    name: Deploy Serverless to Dev
     runs-on: ubuntu-latest
     env:
       NODE_VERSION: 16.x # used for installing the serverless-python-requirements dependency from NPM
-    strategy:
-      matrix:
-        python-version:
-          - 3.9 # with a build matrix, you can specify a list of python versions to deploy with
     steps:
       # --------- use Python to install Python dependencies and run linter, tests, etc. ---------
       - uses: actions/checkout@v3
-      
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Cache pip
-        uses: actions/cache@v3
-        with:
-          # This path is specific to Ubuntu
-          path: ~/.cache/pip
-          # Look to see if there is a cache hit for the corresponding requirements file
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-            ${{ runner.os }}-
 
       - name: Cache node modules
         uses: actions/cache@v3
@@ -48,7 +28,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       
-      - name: Install Node dependencies (specifically, serverless-python-requirements)
+      - name: Install Node dependencies
         run: npm ci
 
       - name: Serverless Deploy
