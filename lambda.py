@@ -1,6 +1,6 @@
 import requests
 
-def handler(event, context):
+def handler (event, context):
     response = requests.get("https://jsonplaceholder.typicode.com/todos/1")
     res = {
         "event": event,
