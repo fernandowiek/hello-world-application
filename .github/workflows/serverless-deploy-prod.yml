@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - 3.8 # with a build matrix, you can specify a list of python versions to deploy with
+          - 3.9 # with a build matrix, you can specify a list of python versions to deploy with
     steps:
       # --------- use Python to install Python dependencies and run linter, tests, etc. ---------
       - uses: actions/checkout@v3
@@ -67,10 +67,10 @@ jobs:
             ${{ runner.os }}-
       
       - name: Install Node dependencies (specifically, serverless-python-requirements)
-        run: npm install
+        run: npm ci
 
       - name: Serverless Deploy
-        uses: serverless/github-action@v3.1
+        uses: serverless/github-action@v3
         with:
           args: deploy
         env:
