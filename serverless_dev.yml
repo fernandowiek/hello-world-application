@@ -1,4 +1,4 @@
-service: hello-world-application-dev
+service: hello-world-application
 
 provider:
   name: aws
