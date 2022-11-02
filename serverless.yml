@@ -3,7 +3,6 @@ service: hello-world-application
 provider:
   name: aws
   runtime: python3.9
-  stage: dev
   region: us-east-1
 
 plugins:
