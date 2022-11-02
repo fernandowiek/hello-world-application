@@ -9,5 +9,6 @@ class HelloTestCase(unittest.TestCase):
     def test_(self):
         self.assertEqual(self.hello.message(), 'Hello, world!')
 
+
 if __name__ == '__main__':
     unittest.main()
