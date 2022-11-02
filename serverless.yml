@@ -14,7 +14,7 @@ package:
 functions:
   theLambda:
     name: hello-world-application
-    handler: lambda.handler
+    handler: main.handler
     description: hello-world-application
     timeout: 5 # seconds
     memorySize: 128 # mb
