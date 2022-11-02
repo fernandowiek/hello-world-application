@@ -42,8 +42,8 @@ jobs:
         flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Unit test (pytest)
-        run: |
-          pytest
+      run: |
+        pytest
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
