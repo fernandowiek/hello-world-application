@@ -1,4 +1,4 @@
-name: Deploy Serverless Python Lambda
+name: Deploy Serverless Python Lambda (prod)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Prod
+    name: Deploy Serverless to Prod
     runs-on: ubuntu-latest
     env:
       NODE_VERSION: 16.x # used for installing the serverless-python-requirements dependency from NPM
@@ -48,7 +48,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       
-      - name: Install Node dependencies (specifically, serverless-python-requirements)
+      - name: Install Node dependencies
         run: npm ci
 
       - name: Serverless Deploy
