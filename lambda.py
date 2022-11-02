@@ -9,5 +9,4 @@ def handler(event, context):
         "context": context
     }
     print(res)
-    
     return None
