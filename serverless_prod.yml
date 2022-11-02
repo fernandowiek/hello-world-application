@@ -1,4 +1,4 @@
-service: hello-world-application
+service: hello-world-application-prod
 
 provider:
   name: aws
@@ -13,11 +13,11 @@ package:
 
 functions:
   theLambda:
-    name: hello-world-application
+    name: hello-world-application-prod
     handler: main.handler
-    description: hello-world-application
-    timeout: 5 # seconds
-    memorySize: 128 # mb
+    description: hello-world-application-prod
+    timeout: 2 # seconds
+    memorySize: 256 # mb
     package:
       patterns:
         - "!node_modules/**"
