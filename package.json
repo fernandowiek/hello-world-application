@@ -9,6 +9,8 @@
   "author": "Jackson Yuan",
   "license": "ISC",
   "devDependencies": {
+    "serverless": "^3.24.0",
+    "serverless-offline": "^11.2.3",
     "serverless-python-requirements": "^6.0.0"
   }
 }
