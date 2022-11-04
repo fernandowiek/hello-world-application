@@ -1,8 +1,8 @@
 
 # hello-world-python-application
 
-In this repository you will find a Hello World coded in Python that will be deployed to AWS Lambda using the Serverless Framework.
-Github Actions has been configured as CI/CD.
+In this repository you will find a Hello World coded in Python that will be deployed to [AWS Lambda](https://aws.amazon.com/pt/lambda) using the [Serverless Framework](https://www.serverless.com).
+[Github Actions](https://github.com/features/actions) has been configured as CI/CD.
 
 ## Gitflow
 
@@ -23,7 +23,7 @@ Here some basic steps to obtain this data:
 - Create an access key for this new user to get the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. (<https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey>)
 - Transform this credentials in two repository secrets (<https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md>).
 
-## Run Serverless locally
+## Run Serverless framework locally
 
 - Install NodeJs and NPM: <https://docs.npmjs.com/downloading-and-installing-node-js-and-npm>
 - Install NPM project dependencies:
